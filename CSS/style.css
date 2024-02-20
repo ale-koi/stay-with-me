@@ -75,17 +75,6 @@ header li {
     
 }
 
-.linkhome a {
-    font-family: "satisfy", cursive ;
-    font-size: 40px;
-    padding: 0;
-    color: #393939;
-    text-shadow: 2px 2px black;
-    text-decoration: none;
-    color: whitesmoke;
-    z-index: 90;
-    
-}
 
 /*up button*/
 .up-button img {
@@ -102,13 +91,12 @@ header li {
 
 footer {
     width: 100%;
-    height: 40px;
+    height: 45px;
     background-color: #F5A7B8;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
     grid-area: footer;
-    
 
 }
 
@@ -119,7 +107,7 @@ footer p {
 .newsletter{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     
 }
@@ -140,46 +128,14 @@ footer input{
 }
 
 .sns-icons {
-    margin-left: 150px;
+    margin-left: 275px;
 }
 
-
-
-/*things that go in home*/
-
-#hero{ 
-    width: 100%;
-    height: 750px;
-    /*margin: 35px;*/
-    background-image: url(../resources/images/homebg.jpg); /*not final pic*/
-    background-repeat: no-repeat;
-    object-fit: cover;
-    position: relative;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    align-content: center;
-        
+footer button{
+    margin: 0 10px;
 }
 
-#hero h1 { /*lower it please*/
-    font-family: "Satisfy", cursive;
-    font-size: 85px;
-    color:#393939;
-    text-shadow: 2px 2px #F5A7B8;
-    padding: 25px;
-    margin-top: 150px;
-}
-
-#hero p{
-    font-size: 14px;
-    letter-spacing: 1px;
-    text-shadow: 1px 1px #F5A7B8;
-    margin-top: -50px;
-    
-}
+/*home*/
 
 h1 {
     font-family: "Satisfy", sans-serif;
@@ -210,9 +166,6 @@ h5 {
     margin-left: 45%;
 }
 
-
-
-
 #homeNews{ 
     width: 100%;
     height: 500px;
@@ -221,15 +174,12 @@ h5 {
 }
 
 h2 {
-    /*font-family: "Satisfy", cursive;*/
     font-size: 50px;
     text-align: center;
-    text-shadow: 10px 10px #393939;
+    text-shadow: 5px 5px #393939;
     color: whitesmoke;
     padding: 25px;
     letter-spacing: 10px;
-    
-
 }
 
 #newsTextHome {
@@ -244,7 +194,7 @@ h2 {
 .news-home-card {
     width: 20%;
     height: 100%;
-    background-color: #393939;
+    background-color: black;
     margin: 0 25px;
     padding: 20px;
     color: whitesmoke;
@@ -264,17 +214,13 @@ h4 {
     z-index: 4;
     text-shadow: 1px 1px black;
     color: whitesmoke;
+    box-shadow: 2px 2px #393939;
 }
 
 
 a {
     text-decoration: none;
     color: inherit;
-
-}
-
-.news-home-card h5{
-    text-align: center;
 
 }
 
@@ -292,7 +238,6 @@ a {
     background-color: #393939;
     object-fit: cover;
 
-   
 }
 
 .home-music-text {
@@ -305,6 +250,7 @@ a {
 .new-music-cards {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .text-album {
@@ -537,7 +483,6 @@ td {
     height: fit-content;
     padding: 12px;
     color: whitesmoke;
-    /*text-indent: 20px;*/
     border-top: 1px solid #F5A7B8;
     background-color: rgba(245, 167, 184, 0.8);
 }
@@ -817,11 +762,14 @@ menu a{
         
     }
 
+    /*footer*/
+
     footer {
         height: auto;
-        display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+        
     
     }
 
@@ -833,6 +781,7 @@ menu a{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         margin-bottom: 10px;
         
     }
@@ -843,37 +792,15 @@ menu a{
     }
 
     .sns-icons { /*whats wrong here???*/
-        position: unset;
+        margin-left: unset;
         
     }
 
-    #hero{ 
-        width: 100%;
-        height: 650px;
-        background-image: url(../resources/images/homebg.jpg); /*might need to cut this picture, don't erase*/
-        background-repeat: no-repeat;
-        object-fit: contain;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        align-content: flex-start;
-        
-            
+    footer button{
+        margin: 10px;
     }
 
-    #hero h1 { /*lower it please*/
-        font-size: 50px;
-        padding: 10px;
-        margin-top: unset;
-        margin-bottom: 10px;
-    }
-
-    #hero p{
-        font-size: 12px;
-        margin-top: -40px;
-        
-    }
+    /*home*/
 
     #homeNews{ 
         height: auto;        
@@ -882,8 +809,9 @@ menu a{
     h2 {
         font-size: 35px;
         padding: 2px;
-        width: fit-content;
-    
+        width: fit-content;    
+        /*letter-spacing: 5px;*/
+        margin: 0 5px;
     }
 
     #newsTextHome { 
@@ -908,29 +836,24 @@ menu a{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        
+        align-items: center;
     }
 
     .album-cover-home {
         width: 24%;
-        height: 400px;
-        background-color: #393939;
-        object-fit: cover;
-    
+        height: auto;
        
     }
     
     .home-music-text {
         width: 100%;
         height: fit-content;
-        background-color: black;
         
     }
 
     .album-cover-home {
         width: 100%;
         height: 400px;
-        background-color: #393939;
         object-fit: cover;
     }
     
@@ -938,8 +861,8 @@ menu a{
     .new-music-cards {
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         width: 100%;
-        /*height: 150px;*/
         font-size: 12px;
         overflow: visible;
     }
@@ -953,24 +876,19 @@ menu a{
     }
 
     #mvTable {
-        width: 100%;
-        background-color: #F5A7B8;
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
         
-        
     }
     
     table {
-        border-bottom: 1px solid black;
-        border-top: 1px solid black;
         padding: 5px;
         width: 100%;
         text-align: left;
-        font-size: 12px;
-        margin: 20px 0;
+        font-size: 14px;
+        margin: 5px 0;
         
       }
       
