@@ -181,6 +181,14 @@ footer input{
     
 }
 
+h1 {
+    font-family: "Satisfy", sans-serif;
+    font-size: 70px;
+    color: #F5A7B8;
+    text-shadow: 2px 2px black;
+    text-align: center;
+}
+
 h5 {
     font-family: "Satisfy", sans-serif;
     font-size: 50px;
@@ -194,14 +202,16 @@ h5 {
     font-family: "montserrat", sans-serif;
     font-size: 20px;
     color: whitesmoke;
-    /*margin-bottom: 200px;*/
+    text-align: center;
 }
 
 .carousel-caption .button-custom{
-    position: relative;
-    left: 45%;
     margin-bottom: 150px;
+    margin-left: 45%;
 }
+
+
+
 
 #homeNews{ 
     width: 100%;
@@ -251,15 +261,16 @@ h4 {
     text-align: center;
     width: fit-content;
     padding: 5px;
-    /*margin-left: 100px;*/
-    
     z-index: 4;
     text-shadow: 1px 1px black;
+    color: whitesmoke;
 }
 
-a{
+
+a {
     text-decoration: none;
     color: inherit;
+
 }
 
 .news-home-card h5{
