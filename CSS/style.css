@@ -1099,14 +1099,14 @@ menu a{
      /*discography*/
 
      #bodyDiscography {
-        grid-template-columns: 2% 20% 76% 2%;
+        grid-template-columns: 24% 76%;
         grid-template-rows: 80px 25px auto auto auto;
         grid-template-areas: 
-            "header header header header"
-            ". . instructions ."
-            ". musicPicker musicPlayer ."
-            ". musicPicker musicPlayer ."
-            "footer footer footer footer"
+            "header header"
+            "instructions instructions"
+            "musicPicker musicPlayer"
+            "musicPicker musicPlayer"
+            "footer footer"
         ;
         row-gap: 5px;
         
@@ -1165,7 +1165,7 @@ menu a{
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        justify-content: center;
+        justify-content: flex-start;
         grid-area: musicPicker;
         overflow: auto;
     
