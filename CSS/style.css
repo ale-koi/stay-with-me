@@ -493,8 +493,8 @@ td {
 .news-title p{
    font-size: 80px; 
    color: whitesmoke;
-   letter-spacing: 20px;
-   text-shadow: 10px 10px #F5A7B8;
+   letter-spacing: 15px;
+   text-shadow: 5px 5px black;
    text-align: right;
    font-weight: 500;
 }
@@ -1175,8 +1175,5 @@ menu a{
         width: 100%;
         height: auto;
     }
-
-
-
     
 }
