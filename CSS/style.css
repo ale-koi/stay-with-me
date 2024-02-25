@@ -715,13 +715,15 @@ menu a{
     header li {
         font-size: 14px;
         padding: 5px;
-
-
     }
 
     nav ul {
         justify-content: center;
         align-items: center;
+    }
+
+    .nav-item:visited {
+        color: whitesmoke;
     }
 
     .linkhome a { /*there must be a better way*/
@@ -731,6 +733,7 @@ menu a{
        left: 150px;
         
     }
+
 
     /*footer*/
 
