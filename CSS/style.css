@@ -177,6 +177,7 @@ h2 {
     color: whitesmoke;
     padding: 25px;
     letter-spacing: 10px;
+
 }
 
 #newsTextHome {
@@ -781,7 +782,7 @@ menu a{
         padding: 2px;
         width: fit-content;    
         margin: 0 5px;
-        text-align: center;
+
     }
 
     #newsTextHome { 
