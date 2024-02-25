@@ -1067,11 +1067,10 @@ menu a{
 
      #bodyDiscography {
         grid-template-columns: 24% 76%;
-        grid-template-rows: 80px 25px auto auto auto;
+        grid-template-rows: 80px 25px 750px auto;
         grid-template-areas: 
             "header header"
             "instructions instructions"
-            "musicPicker musicPlayer"
             "musicPicker musicPlayer"
             "footer footer"
         ;
@@ -1099,7 +1098,7 @@ menu a{
 
     
     .album img {
-        width: 60%;
+        width: 75%;
         height: auto;
     }
 
