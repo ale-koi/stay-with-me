@@ -1,0 +1,210 @@
+#bodyStory {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 70px 40px auto 40px;
+    grid-template-areas: 
+        "header header header"
+        ". menu ."
+        "main main main"
+        "footer footer footer"
+    ;
+    row-gap: 20px;
+    column-gap: 20px;
+    background-color: #393939;
+
+    menu{
+        width: 100%;
+        height: auto;
+        background-color: #F5A7B8;
+        box-shadow: 5px 5px #393939;
+        grid-area: menu;
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: flex-start 
+            }
+
+            li {
+            list-style-type: none;
+            margin: 5px; 
+            }  
+
+            a {
+                font-size: 25px;
+
+                &:hover {
+                    text-shadow: 2px 2px #393939;
+                }
+            }
+        }
+
+    #mainStory {
+        background-color: #393939;
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 20px;
+        overflow: visible;
+        grid-area: main;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+            #erasCard {
+                width: 100%;
+                height: auto;
+                display: flex; 
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+
+                    .eras-year{
+                        width: fit-content;
+                        height: fit-content;
+                        font-size: 40px;
+                        font-style: italic;
+                        background-color: #F5A7B8;
+                        box-shadow: 5px 5px black;
+                        margin: 20px;
+                    
+                    }
+
+                    .era-name h6 {
+                        color: map-get($text-colors, secondary );
+                        width: fit-content;
+                        height: fit-content;
+                        text-align: center;
+                        font-size: 50px;
+                        margin: 30px;
+                        font-weight: 500;
+                        font-style: italic;
+                        letter-spacing: 2px;
+                        text-shadow: 3px 3px black;
+                    }   
+
+                    .eras-description {
+                        width: 60%;
+                        height: 250px;
+                        background-color: #F5A7B8;
+                        box-shadow: 5px 5px black;
+                        padding: 10px;
+                        line-height: 1.6;
+                        text-indent: 30px;
+                        overflow: auto;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-around;
+                        margin: 20px;
+
+                        p{
+                            margin: 0 10px;
+                        }
+
+                        img{
+                            width: 50%;
+                            height: auto;
+                            object-fit: cover;
+                            /*margin: 10px;*/
+                            box-shadow: 2px 2px #393939
+                        }
+                        &:nth-of-type(odd) img{
+                            order: 2;
+                        }
+                    
+                    } 
+
+            }
+        
+    }
+    @include media-query-mobile(){
+        grid-template-columns: 100%;
+        grid-template-rows: 70px auto auto auto;
+        grid-template-areas: 
+            "header"
+            "menu"
+            "main"
+            "footer"
+        ;
+        row-gap: 20px;
+        column-gap: 20px;
+        background-color: #393939;
+
+        menu {
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            li{
+            
+                margin: 0 10px; 
+            }
+        
+        }
+
+        #mainStory{
+        #erasCard {
+            display: flex; 
+            flex-direction: column;
+            justify-content: flex-start;
+            align-content: center;
+            align-items: center;
+
+                .eras-year{
+                    font-size: 30px;
+                    margin: 15px 5px;
+                }
+
+                .era-name h6 {
+                    font-size: 36px;
+                    margin: 30px;
+                    font-weight: 500;
+                    text-shadow: 2px 2px black;
+                }
+
+                .eras-description {
+                    width: 90%;
+                    height: fit-content;
+                    text-indent: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    overflow: unset;
+
+                        img{
+                            width: 95%;
+                            height: auto;
+                            object-fit: cover;
+                            margin: 10px;
+
+                            &:nth-of-type(odd) {
+                                order: unset;
+                            }
+                        }  
+                }
+            }
+        }
+    }
+}
+
+
+.up-button img {
+    width: 50px;
+    height: auto;
+    background-color: #F5A7B8;
+    border-radius: 50px;
+    position: fixed;
+    right: 0;
+    bottom: 40px;
+
+    @include media-query-mobile(){
+        .up-button img {
+            position: fixed;
+            width: 30px;
+
+        }
+    }
+}

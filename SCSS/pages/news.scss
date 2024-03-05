@@ -1,0 +1,81 @@
+.news-mainbody {
+    background-color: #393939;
+    
+    .news-title p{
+        font-size: 80px; 
+        color: whitesmoke;
+        letter-spacing: 15px;
+        text-shadow: 5px 5px black;
+        text-align: right;
+        font-weight: 500;
+    }
+    
+    .news-cube {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    overflow: auto;
+    flex-wrap: wrap;
+        .card {
+            height: 400px;
+            width: 30%;
+            background-color: #393939;
+            margin-bottom: 50px;
+            border: none;
+            .year-title {
+                font-family: 'montserrat', cursive;
+                font-size: 20px;
+                color: white;
+                letter-spacing: 10px;
+                margin-bottom: -10px;
+            }
+            .era-name {
+                font-family: 'satisfy', cursive;
+                font-size: 40px;
+                color: whitesmoke;
+                margin-bottom: -20px;
+                z-index: 2;
+            }
+            .description-era{
+                width: 100%;
+                height: fit-content;
+                padding: 12px;
+                color: whitesmoke;
+                border-top: 1px solid #F5A7B8;
+                background-color: rgba(245, 167, 184, 0.8);
+                    img{
+                        width: 100%;
+                        z-index: -10;
+                    
+                    }
+
+            }
+
+        }
+        
+    }
+
+    @include media-query-mobile(){
+        .news-title p{
+            font-size: 40px; 
+            margin-top: unset;
+        }    
+
+        .news-cube {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .card {
+                height: fit-content;
+                width: 90%;
+        
+            }
+
+           
+        }
+        
+    }
+}
