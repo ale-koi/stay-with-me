@@ -10,12 +10,12 @@
     ;
     row-gap: 20px;
     column-gap: 20px;
-    background-color: #393939;
+    background-color: map-get($colors, primary);
 
     menu{
         width: 100%;
         height: auto;
-        background-color: #F5A7B8;
+        background-color: map-get($colors, secondary);
         box-shadow: 5px 5px #393939;
         grid-area: menu;
             ul {
@@ -40,7 +40,7 @@
         }
 
     #mainStory {
-        background-color: #393939;
+        background-color: map-get($colors, primary);;
         width: 100%;
         height: fit-content;
         margin-bottom: 20px;
@@ -65,14 +65,14 @@
                         height: fit-content;
                         font-size: 40px;
                         font-style: italic;
-                        background-color: #F5A7B8;
+                        background-color: map-get($colors, secondary );
                         box-shadow: 5px 5px black;
                         margin: 20px;
                     
                     }
 
                     .era-name h6 {
-                        color: map-get($text-colors, secondary );
+                        color: map-get($text-colors, primary );
                         width: fit-content;
                         height: fit-content;
                         text-align: center;
@@ -87,7 +87,7 @@
                     .eras-description {
                         width: 60%;
                         height: 250px;
-                        background-color: #F5A7B8;
+                        background-color: map-get($colors, secondary );
                         box-shadow: 5px 5px black;
                         padding: 10px;
                         line-height: 1.6;
@@ -106,7 +106,6 @@
                             width: 50%;
                             height: auto;
                             object-fit: cover;
-                            /*margin: 10px;*/
                             box-shadow: 2px 2px #393939
                         }
                         &:nth-of-type(odd) img{
@@ -129,7 +128,7 @@
         ;
         row-gap: 20px;
         column-gap: 20px;
-        background-color: #393939;
+        background-color: map-get($colors, primary);
 
         menu {
             ul {
@@ -147,54 +146,54 @@
         }
 
         #mainStory{
-        #erasCard {
-            display: flex; 
-            flex-direction: column;
-            justify-content: flex-start;
-            align-content: center;
-            align-items: center;
+            #erasCard {
+                display: flex; 
+                flex-direction: column;
+                justify-content: flex-start;
+                align-content: center;
+                align-items: center;
 
-                .eras-year{
-                    font-size: 30px;
-                    margin: 15px 5px;
-                }
+                    .eras-year{
+                        font-size: 30px;
+                        margin: 15px 5px;
+                    }
 
-                .era-name h6 {
-                    font-size: 36px;
-                    margin: 30px;
-                    font-weight: 500;
-                    text-shadow: 2px 2px black;
-                }
+                    .era-name h6 {
+                        font-size: 36px;
+                        margin: 30px;
+                        font-weight: 500;
+                        text-shadow: 2px 2px black;
+                    }
 
-                .eras-description {
-                    width: 90%;
-                    height: fit-content;
-                    text-indent: 10px;
-                    display: flex;
-                    flex-direction: column;
-                    overflow: unset;
+                    .eras-description {
+                        width: 90%;
+                        height: fit-content;
+                        text-indent: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        overflow: unset;
 
-                        img{
-                            width: 95%;
-                            height: auto;
-                            object-fit: cover;
-                            margin: 10px;
+                            img{
+                                width: 95%;
+                                height: auto;
+                                object-fit: cover;
+                                margin: 10px;
 
-                            &:nth-of-type(odd) {
-                                order: unset;
-                            }
-                        }  
+                                &:nth-of-type(odd) {
+                                    order: unset;
+                                }
+                            }  
+                    }
                 }
             }
         }
-    }
 }
 
 
 .up-button img {
     width: 50px;
     height: auto;
-    background-color: #F5A7B8;
+    background-color: map-get($colors, secondary);
     border-radius: 50px;
     position: fixed;
     right: 0;

@@ -1,9 +1,9 @@
 .news-mainbody {
-    background-color: #393939;
+    background-color: map-get($colors, primary);
     
     .news-title p{
         font-size: 80px; 
-        color: whitesmoke;
+        color: map-get($text-colors, primary );
         letter-spacing: 15px;
         text-shadow: 5px 5px black;
         text-align: right;
@@ -12,29 +12,25 @@
     
     .news-cube {
     height: fit-content;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    overflow: auto;
+    @include flexbox(row, space-around, center);
+    overflow: none;
     flex-wrap: wrap;
         .card {
             height: 400px;
             width: 30%;
-            background-color: #393939;
+            background-color: map-get($colors, primary);
             margin-bottom: 50px;
             border: none;
             .year-title {
-                font-family: 'montserrat', cursive;
                 font-size: 20px;
-                color: white;
+                color: map-get($text-colors, primary);
                 letter-spacing: 10px;
                 margin-bottom: -10px;
             }
             .era-name {
-                font-family: 'satisfy', cursive;
+                font-family: $font-script;
                 font-size: 40px;
-                color: whitesmoke;
+                color: map-get($text-colors, primary );
                 margin-bottom: -20px;
                 z-index: 2;
             }
@@ -42,7 +38,7 @@
                 width: 100%;
                 height: fit-content;
                 padding: 12px;
-                color: whitesmoke;
+                color: map-get($text-colors, secondary );
                 border-top: 1px solid #F5A7B8;
                 background-color: rgba(245, 167, 184, 0.8);
                     img{
@@ -64,9 +60,7 @@
         }    
 
         .news-cube {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            @include flexbox(column, center, center);
 
             .card {
                 height: fit-content;

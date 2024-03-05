@@ -1,8 +1,7 @@
-
 .carousel-caption {
     p {
        font-size: 20px;
-       color: map-get($text-colors, secondary );
+       color: map-get($text-colors, primary );
        text-align: center;
    }
    .button-custom{
@@ -28,7 +27,7 @@
                background-color: map-get($colors, terciary);
                margin: 0 25px;
                padding: 20px;
-               color: map-get($text-colors, secondary );
+               color: map-get($text-colors, primary );
                overflow: auto;
            }
        }
@@ -40,10 +39,8 @@
    @include media-query-mobile(){
        height: auto; 
        .news-text-home { 
-           flex-direction: row;
+           @include flexbox(row, center, center);
            flex-wrap: wrap;
-           justify-content: center;
-           align-items: center;
            height: fit-content;
            .news-home-card {
                width: 75%;
@@ -90,7 +87,7 @@
        height: 400px;
        padding: 20px;
        font-size: 16px;
-       color: map-get($text-colors, secondary );
+       color: map-get($text-colors, primary );
        font-weight: 400;
    }
        
@@ -148,7 +145,7 @@ h2 {
    font-size: 50px;
    text-align: center;
    text-shadow: $text-shadow-web;
-   color: map-get($text-colors, secondary );
+   color: map-get($text-colors, primary );
    padding: 25px;
    letter-spacing: 10px;
        @include media-query-mobile(){
@@ -186,15 +183,16 @@ a {
 }
 
 .button-custom {
-   background-color: #F5A7B8;
+   background-color: map-get($colors, secondary );
    font-size: 14px;
    text-align: center;
    width: fit-content;
-   padding: 5px;
+   padding: 10px;
    z-index: 4;
-   text-shadow: 1px 1px black;
-   color: map-get($text-colors, secondary);
-   box-shadow: 3px 3px #393939;
+   //text-shadow: 1px 1px black;
+   color: map-get($text-colors, secondary );
+   box-shadow: 2px 2px black;
+   font-weight: 500;
 }
 
 
@@ -203,7 +201,7 @@ a {
    height: 300px;
    background-color: map-get($colors, terciary);;
    text-align: center;
-   color: map-get($text-colors, secondary);
+   color: map-get($text-colors, primary );
    display: flex;   
    flex-direction: column;
    align-content: flex-end;
@@ -249,7 +247,7 @@ a {
    .instructions-litle-box {
        font-size: 12px;
        letter-spacing: 2px;
-       color: map-get($text-colors, secondary );
+       color: map-get($text-colors, primary );
        text-shadow: 1px 1px black;
        text-align: center;
        grid-area: instructions;

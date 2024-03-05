@@ -1,0 +1,47 @@
+header {
+    width: 100%;
+    height: 60px;
+    grid-area: header;
+        .navbar {
+        z-index: 9999999;
+        height: 70px !important;
+        }
+        .navbar-brand{
+        font-family: $font-script !important;
+        font-size: 28px !important;
+        color: map-get($text-colors, primary );
+        text-shadow: $text-shadow-web;
+            &:visited {
+            color: map-get($text-colors, primary );
+            }
+        }    
+        .navbar-collapse {
+        background-color: map-get($colors, secondary );
+        text-align: center;
+        }
+        .nav-item{
+            a{
+            font-size: 20px !important;
+            font-weight: 500;
+            color: map-get($text-colors, primary )!important;
+            text-shadow: $text-shadow-web;
+            }
+                &:visited{
+                color: map-get($text-colors, primary );    
+                }
+
+        }
+        .navlink {
+            text-shadow: $text-shadow-web;
+            
+                a{
+                text-decoration: none;
+                color: map-get($text-colors, primary );
+                font-weight: 600;
+                
+                }  
+        }
+    
+}
+
+

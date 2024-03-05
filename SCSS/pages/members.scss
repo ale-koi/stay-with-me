@@ -30,12 +30,12 @@
 
         .member-name p{ 
         font-family: $font-script;
-        color: map-get($text-colors, secondary);
+        color: #F5A7B8;
         font-size: 150px;
         margin-left: 50px;
         margin-right: 25px;
         margin-bottom: -75px;
-        text-shadow: 5px 5px #F5A7B8;
+        text-shadow: 5px 5px #393939;
         text-align: left;
         z-index: 999999;
         position: relative;
@@ -54,7 +54,7 @@
         }
 
         .small-data{
-        color: map-get($text-colors, secondary);
+        color: map-get($text-colors, primary);
         letter-spacing: 10px;
         width: 100%;
         text-align: center;
@@ -68,7 +68,7 @@
         overflow: auto;
             p{
             font-family: 'montserrat';
-            color: map-get($text-colors, secondary);
+            color: map-get($text-colors, primary);
             line-height: 1.5;
             text-indent: 20px;
             }
@@ -77,7 +77,7 @@
         .sns-icons-big img{
         height: 50px;
         width: 50px;
-        background-color: #F5A7B8;
+        background-color: map-get($colors, secondary );
         border-radius: 50px 50px;
         margin-top: 5px;
         }
