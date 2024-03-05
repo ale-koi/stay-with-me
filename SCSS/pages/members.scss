@@ -55,9 +55,11 @@
 
         .small-data{
         color: map-get($text-colors, primary);
-        letter-spacing: 10px;
+        letter-spacing: 5px;
         width: 100%;
         text-align: center;
+        line-height: 1;
+        margin-top: 15px;
         }
 
         .member-description {
