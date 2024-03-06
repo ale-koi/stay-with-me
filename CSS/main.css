@@ -14,7 +14,7 @@ header .navbar {
   height: 70px !important;
 }
 header .navbar-brand {
-  font-family: "Satisfy" !important;
+  font-family: "Satisfy", sans-serif !important;
   font-size: 28px !important;
   color: whitesmoke;
   text-shadow: 2px 2px black;
@@ -110,14 +110,14 @@ footer .sns-icons img {
 }
 
 #carouselExampleDark h1 {
-  font-family: "Satisfy";
+  font-family: "Satisfy", sans-serif;
   font-size: 70px;
   color: #F5A7B8;
   text-shadow: 2px 2px black;
   text-align: center;
 }
 #carouselExampleDark .carousel-caption h2 {
-  font-family: "Satisfy";
+  font-family: "Satisfy", sans-serif;
   font-size: 60px;
   color: #F5A7B8;
   text-shadow: 2px 2px black;
@@ -270,7 +270,7 @@ h2 {
 }
 
 h3 {
-  font-family: "Satisfy";
+  font-family: "Satisfy", sans-serif;
   font-size: 40px;
 }
 @media (max-width: 480px) {
@@ -281,13 +281,6 @@ h3 {
 
 h4 {
   text-align: center;
-}
-
-h5 {
-  font-family: "Satisfy";
-  font-size: 50px;
-  color: #F5A7B8;
-  text-shadow: 2px 2px black;
 }
 
 a {
@@ -583,7 +576,7 @@ a {
   align-content: flex-start;
 }
 #profile h2 {
-  font-family: "Satisfy";
+  font-family: "Satisfy", sans-serif;
   color: #F5A7B8;
   font-size: 150px;
   margin-left: 50px;
@@ -829,7 +822,7 @@ a {
 .news-mainbody {
   background-color: #393939;
 }
-.news-mainbody .news-title p {
+.news-mainbody h1 {
   font-size: 80px;
   color: whitesmoke;
   letter-spacing: 15px;
@@ -853,18 +846,21 @@ a {
   margin-bottom: 50px;
   border: none;
 }
-.news-mainbody .news-cube .card .year-title {
+.news-mainbody .news-cube .card h4 {
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
   color: whitesmoke;
   letter-spacing: 10px;
   margin-bottom: -10px;
+  text-align: left;
 }
-.news-mainbody .news-cube .card .era-name {
-  font-family: "Satisfy";
-  font-size: 40px;
+.news-mainbody .news-cube .card h5 {
+  font-family: "Satisfy", sans-serif;
+  font-size: 36px;
   color: whitesmoke;
-  margin-bottom: -20px;
+  margin-bottom: -15px;
   z-index: 2;
+  text-shadow: 2px 2px black;
 }
 .news-mainbody .news-cube .card .description-era {
   width: 100%;
@@ -885,9 +881,10 @@ a {
   overflow: hidden;
 }
 @media (max-width: 480px) {
-  .news-mainbody .news-title p {
-    font-size: 40px;
-    margin-top: unset;
+  .news-mainbody h1 {
+    font-size: 35px;
+    margin-top: 10px;
+    text-align: center;
   }
   .news-mainbody .news-cube {
     display: flex;
@@ -898,6 +895,7 @@ a {
   .news-mainbody .news-cube .card {
     height: fit-content;
     width: 90%;
+    padding: 1px;
   }
   .news-mainbody .news-cube .card .description-era p {
     height: fit-content;

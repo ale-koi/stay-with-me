@@ -1,7 +1,7 @@
 .news-mainbody {
     background-color: map-get($colors, primary);
     
-    .news-title p{
+    h1{
         font-size: 80px; 
         color: map-get($text-colors, primary );
         letter-spacing: 15px;
@@ -11,28 +11,31 @@
     }
     
     .news-cube {
-    height: fit-content;
-    @include flexbox(row, space-around, center);
-    overflow: none;
-    flex-wrap: wrap;
+        height: fit-content;
+        @include flexbox(row, space-around, center);
+        overflow: none;
+        flex-wrap: wrap;
         .card {
             height: 500px;
             width: 30%;
             background-color: map-get($colors, primary);
             margin-bottom: 50px;
             border: none;
-            .year-title {
+            h4 {
+                font-family: $font-nonscript;
                 font-size: 20px;
                 color: map-get($text-colors, primary);
                 letter-spacing: 10px;
                 margin-bottom: -10px;
+                text-align: left;
             }
-            .era-name {
+            h5 {
                 font-family: $font-script;
-                font-size: 40px;
-                color: map-get($text-colors, primary );
-                margin-bottom: -20px;
+                font-size: 36px;
+                color: map-get($text-colors, primary);
+                margin-bottom: -15px;
                 z-index: 2;
+                text-shadow: $text-shadow-web;
             }
             .description-era{
                 width: 100%;
@@ -58,20 +61,18 @@
     }
 
     @include media-query-mobile(){
-        .news-title {
-            p{
-                font-size: 40px; 
-                margin-top: unset;
-            }
+        h1{
+            font-size: 35px; 
+            margin-top: 10px;
+            text-align: center
         }    
 
         .news-cube {
             @include flexbox(column, center, center);
-
             .card {
                 height: fit-content;
                 width: 90%;
-                
+                padding: 1px;
                 .description-era{
                     p{
                     height: fit-content;
