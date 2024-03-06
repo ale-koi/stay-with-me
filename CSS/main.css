@@ -109,12 +109,28 @@ footer .sns-icons img {
   }
 }
 
-.carousel-caption p {
+#carouselExampleDark h1 {
+  font-family: "Satisfy";
+  font-size: 70px;
+  color: #F5A7B8;
+  text-shadow: 2px 2px black;
+  text-align: center;
+}
+#carouselExampleDark .carousel-caption h2 {
+  font-family: "Satisfy";
+  font-size: 60px;
+  color: #F5A7B8;
+  text-shadow: 2px 2px black;
+  letter-spacing: 0;
+  margin-bottom: -20px;
+}
+#carouselExampleDark .carousel-caption p {
   font-size: 20px;
   color: whitesmoke;
   text-align: center;
+  text-shadow: 2px 2px black;
 }
-.carousel-caption .button-custom {
+#carouselExampleDark .carousel-caption .button-custom {
   margin-bottom: 150px;
   margin-left: 45%;
 }
@@ -236,13 +252,6 @@ footer .sns-icons img {
   }
 }
 
-h1 {
-  font-family: "Satisfy";
-  font-size: 70px;
-  color: #F5A7B8;
-  text-shadow: 2px 2px black;
-  text-align: center;
-}
 h2 {
   font-size: 50px;
   text-align: center;
