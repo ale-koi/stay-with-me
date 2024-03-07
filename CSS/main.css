@@ -720,7 +720,7 @@ a {
 }
 #bodyDiscography #musicPlayer .album .player-data .data-album {
   width: 300px;
-  height: 150px;
+  height: 100px;
   background-color: black;
   box-shadow: 5px 5px #393939;
   color: whitesmoke;
