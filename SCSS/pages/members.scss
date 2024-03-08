@@ -3,108 +3,88 @@
     height: 700px;
     background-repeat: none;
     object-fit: cover;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
+    @include flexbox(column, flex-start, none);
         &:first-of-type {
             background-image: url(../resources/images/jisoo-member-desktop.webp);
         }
-
         &:nth-of-type(2) {
             background-image: url(../resources/images/jennie-member-desktop.webp);
         }
-
         &:nth-of-type(3) {
             background-image: url(../resources/images/rose-member-desktop.webp);
         }
-
         &:last-of-type {
             background-image: url(../resources/images/lisa-members-desktop.webp);
         }
-
         &:nth-of-type(even) {
-            justify-content: flex-end;
-            align-items: flex-end;
+            @include flexbox(column, flex-end, flex-end);
             align-content: flex-start;
         }
-        
         h2{ 
-        font-family: $font-script;
-        color: #F5A7B8;
-        font-size: 150px;
-        margin-left: 50px;
-        margin-right: 25px;
-        margin-bottom: -75px;
-        text-shadow: 5px 5px #393939;
-        text-align: left;
-        z-index: 999999;
-        position: relative;
-        letter-spacing: 0;
+            font-family: $font-script;
+            color: #F5A7B8;
+            font-size: 150px;
+            margin-left: 50px;
+            margin-right: 25px;
+            margin-bottom: -75px;
+            text-shadow: 5px 5px #393939;
+            text-align: left;
+            z-index: 999999;
+            position: relative;
+            letter-spacing: 0;
         }
-
         .profile-data{
             width: 40%;
             height: 500px;
             background-color: rgba(0, 0, 0, 0.6);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
+            @include flexbox(column, space-evenly, center);
             margin: 15px;
             z-index: 0;
         }
-
         .small-data{
-        color: map-get($text-colors, primary);
-        letter-spacing: 5px;
-        width: 100%;
-        text-align: center;
-        line-height: 1;
-        margin-top: 15px;
-        }
-
-        .member-description {
-        padding: 20px;
-        margin-right: 20px;
-        width: 90%;
-        height: 380px;
-        overflow: auto;
-            p{
-            font-family: 'montserrat';
             color: map-get($text-colors, primary);
-            line-height: 1.5;
-            text-indent: 20px;
-            }
-        
+            letter-spacing: 5px;
+            width: 100%;
+            text-align: center;
+            line-height: 1;
+            margin-top: 15px;
+        }
+        .member-description {
+            padding: 20px;
+            margin-right: 20px;
+            width: 90%;
+            height: 380px;
+            overflow: auto;
+                p{
+                font-family: $font-nonscript;
+                color: map-get($text-colors, primary);
+                line-height: 1.5;
+                text-indent: 20px;
+                }
         }
         .sns-icons-big img{
-        height: 50px;
-        width: 50px;
-        background-color: map-get($colors, secondary );
-        border-radius: 50px 50px;
-        margin-top: 5px;
+            height: 50px;
+            width: 50px;
+            background-color: map-get($colors, secondary );
+            border-radius: 50px 50px;
+            margin-top: 5px;
         }
-
         @include media-query-mobile(){
-            
-                width: 100%;
-                height: 915px;
-                background-repeat: none;
-                object-fit: cover;
-                display: flex;
-                justify-content: flex-end;
-                flex-direction: column;
-                align-content: center;
-                   &:first-of-type {
+            width: 100%;
+            height: 915px;
+            background-repeat: none;
+            object-fit: cover;
+            @include flexbox(column, flex-end, center);
+                &:first-of-type {
                     background-image: url(../resources/images/jisoo-member-mobile.webp);
                 }
-                    &:nth-of-type(2) {
+                &:nth-of-type(2) {
                     background-image: url(../resources/images/jennie-member-mobile.webp);
                 }
-                    &:nth-of-type(3) {
+                &:nth-of-type(3) {
                     background-image: url(../resources/images/rose-member-mobile.webp);
                 }
-                    &:last-of-type {
+                &:last-of-type {
                     background-image: url(../resources/images/lisa-member-mobile.webp);
                 }
                 &:nth-of-type(even) {
@@ -112,13 +92,11 @@
                     align-items: center;
                     align-content: center;
                 }
-                &:nth-of-type(even) {
+                &:nth-of-type(ev) {
                     justify-content: flex-end;
                     align-items: center;
                     align-content: center;
                 }
-
-
             h2{ 
                 width: inherit;
                 text-shadow: 5px 5px black;
@@ -128,9 +106,7 @@
                 position: relative;
                 margin-bottom: -40px;
                 margin-left: -10px; 
-
             }
-
             .profile-data{
                 width: 90%;
                 height: 500px;            
@@ -140,7 +116,6 @@
                 margin: 5px;
                 width: 95%;
                 height: 350px;
-                
             }
             img{
                 height: 40px;
@@ -149,9 +124,5 @@
                 margin-top: 5px;
             }
         
-        }
     }
-
-   
-
-    
+}

@@ -10,8 +10,7 @@
         "footer footer footer"
     ;
     row-gap: 15px;
-    background-color: #393939;
-
+    background-color: map-get($colors, primary );
         #musicPlayer{
             width: 100%;
             height: 90%;
@@ -19,33 +18,26 @@
             grid-area: musicPlayer;
             overflow: hidden;
             margin: 50px 0;
-
             .album{
                 width: 100%;
                 height: 100%;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-                align-items: center;
+                @include flexbox(row, space-evenly, center);
                     img {
                         width: 400px;
                         height: 400px;
                         border: 1px solid black;
                         box-shadow: 2px 2px black;
                     }
-
                     .player-data{
-
                         .data-album {
                             width: 300px;
                             height: 100px;
-                            background-color: black;
+                            background-color: map-get($colors, terciary );
                             box-shadow: 5px 5px #393939;
-                            color: whitesmoke;
+                            color: map-get($text-colors, primary);
                             padding: 10px;
                             overflow: hidden;
                             font-size: 12px;
-                            
                         }
 
                     }
@@ -63,48 +55,35 @@
             "footer footer"
             ;
             row-gap: 5px;
-
-            #musicPlayer{
-                width: 100%;
-                height: 100%;
-                background-color: map-get($colors, secondary );
-                grid-area: musicPlayer;
-                overflow: hidden;
-                margin: 0 0;
-
-                .album{
-                    margin: 10px;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-
-                    img {
-                        width: 75%;
-                        height: auto;
+                #musicPlayer{
+                    width: 100%;
+                    height: 100%;
+                    background-color: map-get($colors, secondary );
+                    grid-area: musicPlayer;
+                    overflow: hidden;
+                    margin: 0 0;
+                        .album{
+                            margin: 10px;
+                            @include flexbox(column, center, center);
+                                img {
+                                    width: 75%;
+                                    height: auto;
+                                }
+                                .player-data {
+                                    @include flexbox(column, center, center);
+                                        .data-album {
+                                            width: 85%;
+                                            height: 150px;
+                                            margin-top: -50px;
+                                            box-shadow: unset;
+                                        }
+                                        iframe {
+                                            width: 85%;
+                                            margin-top: 25px;
+                                        }
+                                }  
+                        }
                     }
-
-                    .player-data {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        align-items: center;
-
-                        .data-album {
-                            width: 85%;
-                            height: 150px;
-                            margin-top: -50px;
-                            box-shadow: unset;
-                            
-                        }
-
-                        iframe {
-                            width: 85%;
-                            margin-top: 25px;
-                        }
-                    }  
-                }
-            }
         }
 }
                 
@@ -113,52 +92,39 @@
     width: 100%;
     height: 50px;
     background-color: black;
-    display: flex;
-    flex-direction: row;
+    @include flexbox(row, center, none);
     flex-wrap: nowrap;
-    justify-content: center;
     grid-area: musicPicker;
-
-    img{
-        width: 50px;
-        height: 50px;
-        &:hover {
-            transform: scale(1.6, 1.6);
-        }
-    }
-
-
-    @include media-query-mobile(){
-        width: 95%;
-        height: 100%;
-        background-color: black;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        grid-area: musicPicker;
-        overflow: auto;
-
-            img{
-                width: 100%;
-                height: auto;
-                    &:hover{
-                        transform: unset;
-                    }
+        img{
+            width: 50px;
+            height: 50px;
+                &:hover {
+                    transform: scale(1.6, 1.6);
                 }
-
-
-            
         }
-    }
+        @include media-query-mobile(){
+            width: 95%;
+            height: 100%;
+            background-color: black;
+            @include flexbox(column, flex-start, none);
+            flex-wrap: nowrap;
+            grid-area: musicPicker;
+            overflow: auto;
+                img{
+                    width: 100%;
+                    height: auto;
+                        &:hover{
+                            transform: unset;
+                        }
+                }
+        }
+}
 
 .instructions-litle-box {
     font-size: 12px;
     letter-spacing: 2px;
-    color: whitesmoke;
+    color: map-get($text-colors, primary );
     text-shadow: 1px 1px black;
     text-align: center;
     grid-area: instructions;
-
-
 }

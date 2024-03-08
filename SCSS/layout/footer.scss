@@ -3,9 +3,8 @@ footer {
     width: 100%;
     height: 45px;
     background-color: map-get($colors, secondary );
-    display: flex;
+    @include flexbox(row, space-between, center);
     flex-wrap: nowrap;
-    justify-content: space-between;
     grid-area: footer;
         p {
             margin: 10px;
@@ -19,11 +18,7 @@ footer {
             margin: 10px;
         }
         .newsletter{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: baseline;
-            
+            @include flexbox(row, center, baseline);
         }
         .sns-icons {
             margin-left: 275px;
@@ -33,14 +28,11 @@ footer {
                 background-color: map-get($colors, secondary );
                 border-radius: 30px 30px;
                 margin-top: 7px;
-                
                 }
         }
         @include media-query-mobile(){
             height: auto;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            @include flexbox(column, center, center);
                 p {
                 text-align: center;
                 font-size: 16px;
@@ -51,15 +43,12 @@ footer {
                 button{
                     margin: 0 10px;
                 }
-            .newsletter {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 10px;        
-            }  
-            .sns-icons { 
-            margin-left: unset;
-            }  
+                .newsletter {
+                @include flexbox(column, center, center);
+                    margin-bottom: 10px;        
+                }  
+                .sns-icons { 
+                    margin-left: unset;
+                }  
     }
 }

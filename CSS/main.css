@@ -49,8 +49,10 @@ footer {
   height: 45px;
   background-color: #F5A7B8;
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
   grid-area: footer;
 }
 footer p {
@@ -83,6 +85,7 @@ footer .sns-icons img {
 @media (max-width: 480px) {
   footer {
     height: auto;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -143,8 +146,9 @@ footer .sns-icons img {
 #homeNews .news-text-home {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   height: 350px;
 }
 #homeNews .news-text-home .news-home-card {
@@ -156,8 +160,8 @@ footer .sns-icons img {
   color: whitesmoke;
   overflow: auto;
 }
-#homeNews em {
-  font-size: 22px;
+#homeNews .news-text-home .news-home-card h4 {
+  text-align: center;
 }
 @media (max-width: 480px) {
   #homeNews {
@@ -183,7 +187,9 @@ footer .sns-icons img {
   width: 100%;
   height: 400px;
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
   flex-wrap: wrap;
 }
 #homeLastestMusic .album-cover-home {
@@ -206,6 +212,7 @@ footer .sns-icons img {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
 }
 #homeLastestMusic .text-album {
   width: 45%;
@@ -237,6 +244,7 @@ footer .sns-icons img {
     height: fit-content;
   }
   #homeLastestMusic .new-music-cards {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -269,25 +277,6 @@ h2 {
   }
 }
 
-h3 {
-  font-family: "Satisfy", sans-serif;
-  font-size: 40px;
-}
-@media (max-width: 480px) {
-  h3 {
-    font-size: 30px;
-  }
-}
-
-h4 {
-  text-align: center;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 .button-custom {
   background-color: #F5A7B8;
   font-size: 14px;
@@ -316,6 +305,10 @@ a {
   height: auto;
   text-align: center;
 }
+#homeQuote h3 {
+  font-family: "Satisfy", sans-serif;
+  font-size: 40px;
+}
 @media (max-width: 480px) {
   #homeQuote {
     width: 100%;
@@ -326,6 +319,9 @@ a {
     width: 100%;
     height: auto;
     text-align: center;
+  }
+  #homeQuote h3 {
+    font-size: 30px;
   }
 }
 
@@ -375,6 +371,11 @@ a {
   }
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 #bodyStory {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -417,6 +418,7 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
   flex-wrap: wrap;
 }
 #bodyStory #mainStory #erasCard {
@@ -425,8 +427,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
   align-items: center;
+  align-content: center;
 }
 #bodyStory #mainStory #erasCard h3 {
   font-family: "Montserrat";
@@ -464,6 +466,7 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: none;
   margin: 20px;
 }
 #bodyStory #mainStory #erasCard .eras-description p {
@@ -501,8 +504,8 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-content: center;
     align-items: center;
+    align-content: center;
   }
   #bodyStory #mainStory #erasCard h3 {
     font-size: 30px;
@@ -520,6 +523,8 @@ a {
     text-indent: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: inherit;
+    align-items: inherit;
     overflow: unset;
   }
   #bodyStory #mainStory #erasCard .eras-description img {
@@ -555,8 +560,9 @@ a {
   background-repeat: none;
   object-fit: cover;
   display: flex;
-  justify-content: flex-start;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: none;
 }
 #profile:first-of-type {
   background-image: url(../resources/images/jisoo-member-desktop.webp);
@@ -571,6 +577,8 @@ a {
   background-image: url(../resources/images/lisa-members-desktop.webp);
 }
 #profile:nth-of-type(even) {
+  display: flex;
+  flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
   align-content: flex-start;
@@ -615,7 +623,7 @@ a {
   overflow: auto;
 }
 #profile .member-description p {
-  font-family: "montserrat";
+  font-family: "Montserrat", sans-serif;
   color: whitesmoke;
   line-height: 1.5;
   text-indent: 20px;
@@ -634,9 +642,9 @@ a {
     background-repeat: none;
     object-fit: cover;
     display: flex;
-    justify-content: flex-end;
     flex-direction: column;
-    align-content: center;
+    justify-content: flex-end;
+    align-items: center;
   }
   #profile:first-of-type {
     background-image: url(../resources/images/jisoo-member-mobile.webp);
@@ -655,7 +663,7 @@ a {
     align-items: center;
     align-content: center;
   }
-  #profile:nth-of-type(even) {
+  #profile:nth-of-type(ev) {
     justify-content: flex-end;
     align-items: center;
     align-content: center;
@@ -745,6 +753,7 @@ a {
   }
   #bodyDiscography #musicPlayer .album {
     margin: 10px;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -757,7 +766,6 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     align-items: center;
   }
   #bodyDiscography #musicPlayer .album .player-data .data-album {
@@ -778,8 +786,9 @@ a {
   background-color: black;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
   justify-content: center;
+  align-items: none;
+  flex-wrap: nowrap;
   grid-area: musicPicker;
 }
 #musicPicker img {
@@ -796,8 +805,9 @@ a {
     background-color: black;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
     justify-content: flex-start;
+    align-items: none;
+    flex-wrap: nowrap;
     grid-area: musicPicker;
     overflow: auto;
   }
