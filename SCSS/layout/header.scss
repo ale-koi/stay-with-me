@@ -2,13 +2,18 @@ header {
     width: 100%;
     height: 60px;
     grid-area: header;
+
         .navbar {
             z-index: 9999999;
             height: 70px !important;
+            .container-fluid{
+                display: flex;
+                justify-content: space-between !important;
+            }
         }
         .navbar-brand{
             font-family: $font-script !important;
-            font-size: 28px !important;
+            font-size: 45px !important;
             color: map-get($text-colors, primary );
             text-shadow: $text-shadow-web;
                 &:visited {
@@ -23,20 +28,24 @@ header {
             a{
                 font-size: 20px !important;
                 font-weight: 500;
-                color: map-get($text-colors, primary )!important;
-                text-shadow: $text-shadow-web;
+                color: map-get($text-colors, terciary)!important;
             }
             &:visited{
                 color: map-get($text-colors, primary );    
             }
+            &:hover{
+                transform: scale(1.1, 1.1);
+            }
+           
         }
         .navlink {
             text-shadow: $text-shadow-web;
-                a{
+                a {
                     text-decoration: none;
                     color: map-get($text-colors, primary );
-                    font-weight: 600;
-                }  
+                    font-weight: 500;
+                        
+                }   
         }
     
 }

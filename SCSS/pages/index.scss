@@ -1,54 +1,56 @@
 #carouselExampleDark{
-    h1 {
-    font-family: $font-script;
-    font-size: 70px;
-    color: map-get($colors, secondary);
-    text-shadow: $text-shadow-web;
-    text-align: center;
+        .carousel-caption { 
+            h1 {
+                font-family: $font-script;
+                font-size: 70px;
+                color: map-get($colors, secondary);
+                text-shadow: $text-shadow-web;
+                text-align: center;
+            }
+            h2 {
+                font-family: $font-script;
+                font-size: 60px;
+                color: map-get($colors, secondary );
+                text-shadow: $text-shadow-web;
+                letter-spacing: 0;
+                margin-bottom: -20px;
+                }
+            p {
+                font-size: 20px;
+                color: map-get($text-colors, primary);
+                text-align: center;
+                text-shadow: $text-shadow-web;
+            }
+            .button-custom{
+                    margin-bottom: 150px;
+                    margin-left: 43%;
+            }
+        }
     }
-    .carousel-caption { 
-        h2 {
-            font-family: $font-script;
-            font-size: 60px;
-            color: map-get($colors, secondary );
-            text-shadow: $text-shadow-web;
-            letter-spacing: 0;
-            margin-bottom: -20px;   
-        }
-        p {
-        font-size: 20px;
-        color: map-get($text-colors, primary);
-        text-align: center;
-        text-shadow: $text-shadow-web;
-        }
-        .button-custom{
-            margin-bottom: 150px;
-            margin-left: 45%;
-        }
-    }
-}
 
 #homeNews{ 
    width: 100%;
-   height: 500px;
+   height: 600px;
    background-color: map-get($colors, secondary);
        .news-text-home {
-        @include flexbox(row, center, center);
-       flex-wrap: wrap;
-       height: 350px;
-           .news-home-card {
-               width: 20%;
-               height: 100%;
-               background-color: map-get($colors, terciary);
-               margin: 0 25px;
-               padding: 20px;
-               color: map-get($text-colors, primary );
-               overflow: auto;
-                h4 {
-                    text-align: center;
-                }
-           }
-       }
+            @include flexbox(row, center, center);
+            flex-wrap: wrap;
+            height: 450px;
+                .news-home-card {
+                    width: 25%;
+                    height: 90%;
+                    background-color: map-get($colors, terciary);
+                    margin: 0 25px;
+                    padding: 20px;
+                    color: map-get($text-colors, primary );
+                    overflow: hidden;
+                    @include flexbox(column, space-between, flex-start);
+                        h4 {
+                            text-align: center;
+                        }
+                       
+            }
+        }
 
    @include media-query-mobile(){
        height: auto; 
@@ -73,7 +75,6 @@
    height: 400px;
    @include flexbox(row, flex-start, center);
    flex-wrap: wrap;
-
        .album-cover-home {
            width: 24%;
            height: 400px;
@@ -86,29 +87,28 @@
            }
         }
 
-   .home-music-text {
+        .home-music-text {
        width: 52%;
        height: 400px;
        background-color: map-get($colors, terciary);
+       font-size: 16px;
     }
 
-   .new-music-cards {
-       @include flexbox(row, flex-start, center);
+    .new-music-cards {
+        @include flexbox(row, space-between, center);
+        
+        }
+        
+    .text-album {
+        width: 45%;
+        height: auto;
+        padding: 20px;
+        font-size: 16px;
+        color: map-get($text-colors, primary );
+        font-weight: 400;
+        @include flexbox(column, space-between, flex-start);
     }
-       
-   .text-album {
-       width: 45%;
-       height: 400px;
-       padding: 20px;
-       font-size: 16px;
-       color: map-get($text-colors, primary );
-       font-weight: 400;
-   }
-       
-   .home-music-text p{
-       font-size: 16px;
-       
-   } 
+        
 
    @include media-query-mobile(){
        width: 100%;
@@ -164,7 +164,6 @@ h2 {
    width: fit-content;
    padding: 10px;
    z-index: 4;
-   //text-shadow: 1px 1px black;
    color: map-get($text-colors, secondary );
    box-shadow: 2px 2px black;
    font-weight: 500;
@@ -227,27 +226,23 @@ h2 {
    .instructions-litle-box {
        font-size: 12px;
        letter-spacing: 2px;
-       color: map-get($text-colors, primary );
-       text-shadow: 1px 1px black;
+       color: map-get($text-colors, secondary);
        text-align: center;
-       grid-area: instructions;
    }
+
    @include media-query-mobile(){
-       display: flex;
-       justify-content: center;
-       flex-direction: column;
-       align-items: center;
-       table {
-           padding: 5px;
-           width: 100%;
-           text-align: left;
-           font-size: 14px;
-           margin: 5px 0;
-               td {
-                   padding: 5px;
-               }
-           }
-       }
+        @include flexbox(column, center, center);
+            table {
+                padding: 5px;
+                width: 100%;
+                text-align: left;
+                font-size: 14px;
+                margin: 5px 0;
+                    td {
+                        padding: 5px;
+                    }
+                }
+            }
 }
 
 a {

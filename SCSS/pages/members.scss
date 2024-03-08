@@ -67,7 +67,7 @@
             width: 50px;
             background-color: map-get($colors, secondary );
             border-radius: 50px 50px;
-            margin-top: 5px;
+            margin: 10px 0;
         }
         @include media-query-mobile(){
             width: 100%;
