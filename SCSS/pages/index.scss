@@ -128,7 +128,7 @@
            .new-music-cards {
                 @include flexbox(column, center, center);
                width: 100%;
-               font-size: 12px;
+               font-size: 14px;
                overflow: visible;
             }
 
@@ -136,7 +136,7 @@
                width: 90%;
                height: fit-content;
                padding: 10px;
-               font-size: 12px;
+               font-size: 14px;
             }
         }
 }
