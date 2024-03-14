@@ -19,6 +19,9 @@ header {
                 &:visited {
                     color: map-get($text-colors, primary );
                 }
+                &:hover{
+                    color: map-get($text-colors, primary );
+                }
         }    
         .navbar-collapse {
             background-color: map-get($colors, secondary );

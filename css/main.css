@@ -26,6 +26,9 @@ header .navbar-brand {
 header .navbar-brand:visited {
   color: whitesmoke;
 }
+header .navbar-brand:hover {
+  color: whitesmoke;
+}
 header .navbar-collapse {
   background-color: #F5A7B8;
   text-align: center;
