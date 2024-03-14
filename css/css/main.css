@@ -817,7 +817,6 @@ a {
 }
 #musicPicker img:hover {
   transform: scale(1.6, 1.6);
-  z-index: 10;
 }
 @media (max-width: 480px) {
   #musicPicker {
