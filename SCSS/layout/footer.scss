@@ -16,6 +16,7 @@ footer {
             width: 150px;
             height: 16px;
             margin: 10px;
+            padding: 10px;
         }
         .newsletter{
             @include flexbox(row, center, baseline);

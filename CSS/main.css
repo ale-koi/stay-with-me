@@ -19,7 +19,7 @@ header .navbar .container-fluid {
 }
 header .navbar-brand {
   font-family: "Satisfy", sans-serif !important;
-  font-size: 45px !important;
+  font-size: 40px !important;
   color: whitesmoke;
   text-shadow: 2px 2px black;
 }
@@ -71,6 +71,7 @@ footer input {
   width: 150px;
   height: 16px;
   margin: 10px;
+  padding: 10px;
 }
 footer .newsletter {
   display: flex;
@@ -731,6 +732,10 @@ a {
   justify-content: space-evenly;
   align-items: center;
 }
+#bodyDiscography #musicPlayer .album iframe {
+  height: 250px;
+  width: 300px;
+}
 #bodyDiscography #musicPlayer .album img {
   width: 400px;
   height: 400px;
@@ -789,7 +794,8 @@ a {
     box-shadow: unset;
   }
   #bodyDiscography #musicPlayer .album .player-data iframe {
-    width: 85%;
+    width: 80%;
+    height: 50%;
     margin-top: 25px;
   }
 }

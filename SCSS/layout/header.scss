@@ -13,7 +13,7 @@ header {
         }
         .navbar-brand{
             font-family: $font-script !important;
-            font-size: 45px !important;
+            font-size: 40px !important;
             color: map-get($text-colors, primary );
             text-shadow: $text-shadow-web;
                 &:visited {
@@ -36,7 +36,6 @@ header {
             &:hover{
                 transform: scale(1.1, 1.1);
             }
-           
         }
         .navlink {
             text-shadow: $text-shadow-web;
